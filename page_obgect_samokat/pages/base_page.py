@@ -2,8 +2,6 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
 
-
-
 class BasePage:
     def __init__(self, driver):
         self.driver = driver
@@ -19,7 +17,7 @@ class BasePage:
 
     def click_to_element(self, locator):
         self.wait.until(expected_conditions.element_to_be_clickable(locator))
-        self.driver.find_element(locator).click()
+        self.driver.find_element(*locator).click()
 
     def wait_text(self, locator, text):
         self.wait.until_not(expected_conditions.text_to_be_present_in_element_value(locator, text))
@@ -40,8 +38,7 @@ class BasePage:
         windows_list = self.driver.window_handles
         self.driver.switch_to.window(windows_list[-1])
 
-    # def scroll_to_element(self, locator):
-    #     # Скролл до элемента
-    #     element = self.find_element_with_wait(locator)
-    #     self.driver.execute_script("arguments[7].scrollIntoView();", element)
-
+    def scroll_to_element(self, locator):
+        # Скролл до элемента
+        element = self.find_element_with_wait(locator)
+        self.driver.execute_script("arguments[0].scrollIntoView(true);", element)
