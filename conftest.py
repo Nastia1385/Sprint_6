@@ -1,6 +1,7 @@
 import pytest
 from selenium import webdriver
 from page_obgect_samokat.pages.main_page import MainPage
+from page_obgect_samokat.pages.order_page import OrderPage
 
 
 @pytest.fixture(scope="function")
@@ -16,9 +17,9 @@ def main_page(driver):
     page.timeout = 10
     return page
 
-# @pytest.fixture
-# def order_page(driver):
-#     page = OrderPage(driver)
-#     page.timeout = 10
-#     return page
+@pytest.fixture
+def order_page(driver):
+    page = OrderPage(driver)
+    page.timeout = 10
+    return page
 
