@@ -42,3 +42,5 @@ class BasePage:
         # Скролл до элемента
         element = self.find_element_with_wait(locator)
         self.driver.execute_script("arguments[0].scrollIntoView(true);", element)
+
+

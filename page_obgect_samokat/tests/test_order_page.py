@@ -20,6 +20,7 @@ class TestOrderPage:
         order_page.go_to_url(URL)
         order_page.set_first_page_info(order_data)
         order_page.set_second_page_info(order_data)
+        assert order_page.is_order_successful()
 
 
 

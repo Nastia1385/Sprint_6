@@ -1,5 +1,4 @@
 import allure
-
 from page_obgect_samokat.locators.main_page_locators import MainPageLocators
 from page_obgect_samokat.pages.base_page import BasePage
 

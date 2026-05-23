@@ -29,6 +29,15 @@ class OrderPage(BasePage):
         self.click_to_element(OrderPageLocators.SCOOTER_COLOR_BLACK)
         self.add_text_to_element(OrderPageLocators.COMMENT_FIELD, data['comment'])
         self.click_to_element(OrderPageLocators.ORDER_BUTTON)
-        self.find_element_with_wait(OrderPageLocators.ORDER_CONFIRMATION_WINDOW)
+        self.click_to_element(OrderPageLocators.CONFIRM_BUTTON)
+        # self.find_element_with_wait(OrderPageLocators.STATUS_BUTTON)
+
+    def is_order_successful(self):
+        """Проверка успешного создания заказа"""
+        return self.find_element_with_wait(OrderPageLocators.STATUS_BUTTON)
+
+
+
+
 
 
