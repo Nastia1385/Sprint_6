@@ -1,10 +1,13 @@
+import allure
 import pytest
 
 from data import ORDER_DATA_1, ORDER_DATA_2, URL
-from page_obgect_samokat.locators.main_page_locators import MainPageLocators
-from page_obgect_samokat.pages.order_page import OrderPage
+from locators.main_page_locators import MainPageLocators
 
 
+
+@allure.title('Тесты на проверку создания заказов')
+@allure.description('')
 class TestOrderPage:
 
     @pytest.mark.parametrize(
@@ -14,8 +17,7 @@ class TestOrderPage:
             (MainPageLocators.BOTTOM_REGISTER_BUTTON, ORDER_DATA_2)
         ]
     )
-    def test_create_order(self, driver,locator, order_data):
-        order_page = OrderPage(driver)
+    def test_create_order(self, driver,locator, order_data, order_page):
         order_page.go_to_url(URL)
         order_page.set_first_page_info(order_data)
         order_page.set_second_page_info(order_data)

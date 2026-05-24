@@ -1,8 +1,8 @@
 import allure
 
-from page_obgect_samokat.locators.main_page_locators import MainPageLocators
-from page_obgect_samokat.locators.order_page_locators import OrderPageLocators
-from page_obgect_samokat.pages.base_page import BasePage
+from locators.main_page_locators import MainPageLocators
+from locators.order_page_locators import OrderPageLocators
+from pages.base_page import BasePage
 
 
 class OrderPage(BasePage):

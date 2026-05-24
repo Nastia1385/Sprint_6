@@ -1,6 +1,6 @@
-from page_obgect_samokat.locators.main_page_locators import MainPageLocators
-from page_obgect_samokat.locators.transitions_locators import TransitionPageLocators
-from page_obgect_samokat.pages.base_page import BasePage
+from locators.main_page_locators import MainPageLocators
+from locators.transitions_locators import TransitionPageLocators
+from pages.base_page import BasePage
 
 
 class TransitionPage(BasePage):

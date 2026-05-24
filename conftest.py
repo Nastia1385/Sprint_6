@@ -1,7 +1,8 @@
 import pytest
 from selenium import webdriver
-from page_obgect_samokat.pages.main_page import MainPage
-from page_obgect_samokat.pages.order_page import OrderPage
+from pages.main_page import MainPage
+from pages.order_page import OrderPage
+from pages.transition_page import TransitionPage
 
 
 @pytest.fixture(scope="function")
@@ -23,3 +24,8 @@ def order_page(driver):
     page.timeout = 10
     return page
 
+@pytest.fixture
+def transition_page(driver):
+    page = TransitionPage(driver)
+    page.timeout = 10
+    return page
