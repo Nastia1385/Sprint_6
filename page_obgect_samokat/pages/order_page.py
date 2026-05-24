@@ -9,7 +9,6 @@ class OrderPage(BasePage):
 
     @allure.step('Заполнение первой страницы заказа')
     def set_first_page_info(self, data):
-        # self.click_to_element(OrderPageLocators.FIRST_PAGE)
         self.click_to_element(MainPageLocators.TOP_ORDER_BUTTON)
         self.add_text_to_element(OrderPageLocators.NAME_FIELD, data['name'])
         self.add_text_to_element(OrderPageLocators.SURNAME_FIELD, data['surname'])
@@ -20,7 +19,7 @@ class OrderPage(BasePage):
         self.add_text_to_element(OrderPageLocators.PHONE_FIELD, data['phone'])
         self.click_to_element(OrderPageLocators.NEXT_BUTTON)
 
-
+    @allure.step('Заполнение второй страницы заказа')
     def set_second_page_info(self, data):
         self.click_to_element(OrderPageLocators.DATE_FIELD)
         self.click_to_element(OrderPageLocators.CURRENT_DATE)
@@ -30,11 +29,13 @@ class OrderPage(BasePage):
         self.add_text_to_element(OrderPageLocators.COMMENT_FIELD, data['comment'])
         self.click_to_element(OrderPageLocators.ORDER_BUTTON)
         self.click_to_element(OrderPageLocators.CONFIRM_BUTTON)
-        # self.find_element_with_wait(OrderPageLocators.STATUS_BUTTON)
+
 
     def is_order_successful(self):
-        """Проверка успешного создания заказа"""
+        # Проверка успешного создания заказа
         return self.find_element_with_wait(OrderPageLocators.STATUS_BUTTON)
+
+
 
 
 

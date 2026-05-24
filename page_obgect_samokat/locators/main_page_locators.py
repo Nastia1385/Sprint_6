@@ -10,5 +10,9 @@ class MainPageLocators:
     TOP_ORDER_BUTTON = By.XPATH, '//*[@class="Button_Button__ra12g"]'
     BOTTOM_REGISTER_BUTTON = By.XPATH, '//*[@class ="Button_Button__ra12g Button_UltraBig__UU3Lp"]'
     SAMOKAT_LOGO = (By.XPATH, '//img[@alt="Scooter"]')
+    MAIN_SLOGAN = '//div[@class ="Home_Header__iJKdX"]'
+
+
+
 
 

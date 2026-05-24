@@ -2,7 +2,6 @@ import pytest
 
 from data import ORDER_DATA_1, ORDER_DATA_2, URL
 from page_obgect_samokat.locators.main_page_locators import MainPageLocators
-from page_obgect_samokat.locators.order_page_locators import OrderPageLocators
 from page_obgect_samokat.pages.order_page import OrderPage
 
 

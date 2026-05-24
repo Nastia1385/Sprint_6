@@ -27,17 +27,6 @@ class MainPage(BasePage):
         return text == my_text
 
 
-    def click_to_logo(self):
-        # Клик по логотипу яндекса
-        self.click_to_element(MainPageLocators.LOGO_YANDEX_LOCATOR)
-
-    def click_samokat_logo(self):
-        # Клик по логотипу Самокатa
-        self.click_to_element(MainPageLocators.SAMOKAT_LOGO)
-
-    def get_current_url(self):
-        """Получение текущего URL"""
-        return self.driver.current_url
 
 
 
